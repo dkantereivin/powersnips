@@ -29,7 +29,7 @@ export class SnippetLoader {
             .filter(entry => entry.isFile())
             .map(entry => path.join(dirPath, entry.name));
 
-        const snippetPaths = [...workspaceSnippetPaths, ...globalSnippetPaths]
+        const snippetPaths = [...globalSnippetPaths, ...workspaceSnippetPaths]
             .filter(fsPath => path.extname(fsPath.toLowerCase()) === FILE_EXTENSION);
 
         const snippetFiles: Promise<SnippetFile>[] = snippetPaths.map(async (fsPath: string) => ({
