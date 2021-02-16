@@ -10,6 +10,8 @@
 		"Other"
 	],
 	"activationEvents": [
+		"onStartupFinished",
+		"workspaceContains:*.psnip",
 		"onCommand:powersnips.helloWorld",
 		"onCommand:powersnips.loadSnippets"
 	],
